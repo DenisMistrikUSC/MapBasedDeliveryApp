@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonnav"
+        android:layout_width="187dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/md_grey_200"
+        android:enabled="false"
+        android:text="Navigate"
+        android:textColor="@color/md_grey_900"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <Button
+        android:id="@+id/buttoncart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cart"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="@+id/mapView"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapView"
+        app:layout_constraintVertical_bias="0.01999998" />
+    <Button
+        android:id="@+id/buttonopen"
+        android:layout_width="187dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/md_grey_200"
+        android:enabled="false"
+        android:text="View"
+        android:textColor="@color/md_grey_900"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.96"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonHistory"
+        android:layout_width="177dp"
+        android:layout_height="49dp"
+        android:backgroundTint="@color/md_grey_200"
+        android:enabled="true"
+        android:text="View History"
+        android:textColor="@color/md_grey_900"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="@+id/mapView"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapView"
+        app:layout_constraintVertical_bias="0.01999998"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        mapbox:mapbox_cameraTargetLat="34.023073"
+        mapbox:mapbox_cameraTargetLng="-118.286163"
+        mapbox:mapbox_cameraZoom="14"
+        tools:layout_editor_absoluteY="29dp">
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
